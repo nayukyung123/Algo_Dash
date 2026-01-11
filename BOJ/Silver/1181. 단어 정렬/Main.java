@@ -1,10 +1,10 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList; // 수정
-import java.util.Collections; // 추가
+import java.util.ArrayList; 
+import java.util.Collections; 
 import java.util.HashSet;
-import java.util.List; // 수정
+import java.util.List; 
 import java.util.Set;
 
 public class Main {
@@ -20,7 +20,7 @@ public class Main {
 
         List<String> list = new ArrayList<>(set);
 
-        // Collections.sort를 사용하거나 list.sort 사용
+       
         Collections.sort(list, (a, b) -> {
             if (a.length() != b.length()) {
                 return a.length() - b.length();
