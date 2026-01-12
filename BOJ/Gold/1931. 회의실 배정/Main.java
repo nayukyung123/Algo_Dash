@@ -10,7 +10,7 @@ public class Main {
 
 		int n = Integer.parseInt(br.readLine());
 
-		int[][] meeting = new int[n][1];
+		int[][] meeting = new int[n][2];
 		for (int i = 0; i < n; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			meeting[i][0] = Integer.parseInt(st.nextToken());
