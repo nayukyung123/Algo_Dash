@@ -8,32 +8,36 @@ public class Main {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
 		StringTokenizer st = new StringTokenizer(br.readLine());
-		int n = Integer.parseInt(br.readLine());
-		int m = Integer.parseInt(br.readLine());
+		int n = Integer.parseInt(st.nextToken());
+		int m = Integer.parseInt(st.nextToken());
 
 		int[] arr = new int[n];
+
+        st = new StringTokenizer(br.readLine());
 		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine());
 			arr[i] = Integer.parseInt(st.nextToken());
 		}
 
-		int start = 0; // 시작
-		int end = 0; // 끝
-		int sum = 0;
+		int start = 0;
+		int end = 0;
 		int cnt = 0;
+		int sum = 0;
 
 		while (true) {
-			if (sum >= start) { // 합 > m
+			if(sum >= m) {
 				sum -= arr[start++];
-			} else if (end == n) {// 끝까지 탐색완료 
+			} else if (end == n) {
 				break;
-			} else { // 합 < m
+			} else {
 				sum += arr[end++];
 			}
-			if (sum == m) {
-				cnt++;
+			
+			if(sum == m) {
+				cnt ++;
 			}
+			
 		}
 		System.out.println(cnt);
+
 	}
 }
