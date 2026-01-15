@@ -15,10 +15,9 @@ public class Main {
 	static int[] dr = {0,0,-1,1};
 	static int[] dc = {1,-1,0,0};
 	
-	
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		int n = Integer.parseInt(br.readLine());
+		n = Integer.parseInt(br.readLine());
 		
 		map = new int[n][n];
 		visited = new boolean[n][n];
@@ -36,9 +35,7 @@ public class Main {
 				if(map[i][j] == 1 && !visited[i][j]) {
 					result.add(bfs(i,j));
 				}
-				
 			}
-			
 		}
 		
 		Collections.sort(result);
@@ -70,7 +67,6 @@ public class Main {
 					count++;
 				}
 			}
-			
 		}
 		
 		return count;
